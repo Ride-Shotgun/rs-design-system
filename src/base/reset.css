@@ -1,0 +1,196 @@
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+}
+
+@supports (scrollbar-gutter: stable) {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  background-color: var(--rs-color-surface-page);
+
+  font-family: var(--rs-font-family-body);
+  font-size: var(--rs-font-size-sm);
+  font-weight: var(--rs-font-weight-regular);
+  font-optical-sizing: auto;
+  color: var(--rs-color-text-default);
+}
+
+[id] {
+  scroll-margin-top: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+
+  font-family: var(--rs-font-family-heading);
+  font-weight: var(--rs-font-weight-bold);
+  letter-spacing: var(--rs-letter-spacing-tight);
+  color: var(--rs-color-text-strong);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td,
+figure {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+}
+
+strong {
+  font-weight: var(--rs-font-weight-semibold);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+blockquote::before,
+blockquote::after {
+  content: "";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+input[type="submit"],
+textarea,
+button {
+  box-shadow: none;
+
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a,
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+button {
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

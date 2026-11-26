@@ -1,0 +1,7 @@
+.mb-xl {
+  margin-bottom: var(--rs-space-xl);
+}
+
+.mb-md {
+  margin-bottom: var(--rs-space-md);
+}
