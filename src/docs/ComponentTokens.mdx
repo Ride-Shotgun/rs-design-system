@@ -1,0 +1,12 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks"
+import { renderComponentTokens } from "./token-docs.js"
+
+<Meta title="Foundations/Component tokens" />
+
+<Unstyled>
+  <div className="rs-docs">
+    <h1 className="rs-docs__title">Component tokens</h1>
+    <p className="rs-docs__lead">Tokens scoped to a single component, grouped by component. A dash in the Dark column means the light reference is used in both themes.</p>
+    <div className="rs-docs__body" dangerouslySetInnerHTML={{ __html: renderComponentTokens() }} />
+  </div>
+</Unstyled>

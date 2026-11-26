@@ -1,0 +1,12 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks"
+import { renderPrimitiveColours } from "./token-docs.js"
+
+<Meta title="Foundations/Colour/Primitives" />
+
+<Unstyled>
+  <div className="rs-docs">
+    <h1 className="rs-docs__title">Colour: primitives</h1>
+    <p className="rs-docs__lead">Raw colour values, grouped by hue. Don't use these in component CSS: reference a semantic token instead.</p>
+    <div className="rs-docs__body" dangerouslySetInnerHTML={{ __html: renderPrimitiveColours() }} />
+  </div>
+</Unstyled>

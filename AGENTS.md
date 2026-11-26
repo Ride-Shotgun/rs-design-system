@@ -15,6 +15,16 @@ for now; no framework has been chosen.
 - Never edit `dist/` — it's build output.
 - Run `npm run lint:css` and fix all errors before finishing a task.
 
+## Working Practices
+
+- Inspect existing code before making changes.
+- Avoid unnecessary refactoring.
+- Make small, focused changes.
+- Explain significant architectural decisions.
+- Preserve existing functionality.
+- Do not run any write or edit terminal commands without prompting user
+- Read terminal commands are OK
+
 ## Tokens
 
 - Every custom property uses the `--rs-` prefix.

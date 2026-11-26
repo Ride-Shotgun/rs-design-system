@@ -2,15 +2,19 @@
   "name": "rs-design-system",
   "version": "1.0.0",
   "description": "**NOTE: This is a work in-progress**",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
-    "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky",
-    "lint:css": "stylelint \"src/**/*.css\"",
-    "format": "prettier --write ."
+    "lint:css": "stylelint \"src/**/*.css\" \".storybook/**/*.css\"",
+    "format": "prettier --write .",
+    "tokens": "node build-tokens.js",
+    "dev": "npm run tokens && vite",
+    "build": "npm run tokens && vite build",
+    "storybook": "npm run tokens && storybook dev -p 6006",
+    "build-storybook": "npm run tokens && storybook build"
   },
   "repository": {
     "type": "git",
@@ -24,9 +28,15 @@
   },
   "homepage": "https://github.com/Ride-Shotgun/rs-design-system#readme",
   "devDependencies": {
+    "@storybook/addon-docs": "^10.6.9",
+    "@storybook/addon-themes": "^10.6.9",
+    "@storybook/html-vite": "^10.6.9",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
+    "postcss-nesting": "^14.0.3",
     "prettier": "^3.10.1",
+    "storybook": "^10.6.9",
+    "style-dictionary": "^5.8.0",
     "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-order": "^9.0.0",
@@ -34,7 +44,7 @@
   },
   "exports": {
     ".": "./dist/rs-design-system.js",
-    "./style.css": "./dist/<output-name>.css"
+    "./style.css": "./dist/rs-design-system.css"
   },
   "files": [
     "dist"
@@ -45,8 +55,5 @@
       "prettier --write"
     ],
     "*.{js,json,html,md}": "prettier --write"
-  },
-  "dependencies": {
-    "postcss-nesting": "^14.0.3"
   }
 }

@@ -1,0 +1,12 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks"
+import { renderScales } from "./token-docs.js"
+
+<Meta title="Foundations/Spacing, radius and border width" />
+
+<Unstyled>
+  <div className="rs-docs">
+    <h1 className="rs-docs__title">Spacing, radius and border width</h1>
+    <p className="rs-docs__lead">Size scales for layout, corner radii and borders.</p>
+    <div className="rs-docs__body" dangerouslySetInnerHTML={{ __html: renderScales() }} />
+  </div>
+</Unstyled>

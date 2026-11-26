@@ -1,0 +1,183 @@
+/*
+ * Foundations doc pages (Storybook only, not part of the package build).
+ * Styled with the design system's own semantic tokens.
+ */
+
+.rs-docs {
+  display: grid;
+  gap: var(--rs-space-md);
+
+  font-family: var(--rs-font-family-body);
+  font-size: var(--rs-font-size-md);
+  line-height: var(--rs-line-height-body);
+  color: var(--rs-color-text-default);
+}
+
+.rs-docs__title {
+  margin: 0;
+
+  font-family: var(--rs-font-family-heading);
+  font-size: var(--rs-font-size-xl);
+  font-weight: var(--rs-font-weight-bold);
+  letter-spacing: var(--rs-letter-spacing-tight);
+  color: var(--rs-color-text-strong);
+}
+
+.rs-docs__lead,
+.rs-docs__text {
+  margin: 0;
+}
+
+.rs-docs__lead {
+  color: var(--rs-color-text-subtle);
+}
+
+.rs-docs__body {
+  display: grid;
+  gap: var(--rs-space-2xl);
+  margin-top: var(--rs-space-lg);
+}
+
+.rs-docs__section {
+  display: grid;
+  gap: var(--rs-space-md);
+}
+
+.rs-docs__heading {
+  padding-bottom: var(--rs-space-sm);
+  margin: 0;
+
+  border-bottom: var(--rs-border-width-sm) solid var(--rs-color-border-default);
+
+  font-family: var(--rs-font-family-heading);
+  font-size: var(--rs-font-size-lg);
+  font-weight: var(--rs-font-weight-semibold);
+  color: var(--rs-color-text-strong);
+}
+
+.rs-docs__list {
+  display: grid;
+  gap: var(--rs-space-xs);
+  padding-left: var(--rs-space-lg);
+  margin: 0;
+}
+
+/* Cards: colour primitives and the tier overview */
+
+.rs-docs__swatches {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc(var(--rs-space-2xl) * 4), 1fr)
+  );
+  gap: var(--rs-space-md);
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.rs-docs__card {
+  display: grid;
+  align-content: start;
+  gap: var(--rs-space-xs);
+  padding: var(--rs-space-sm);
+
+  background-color: var(--rs-color-surface-raised);
+  border: var(--rs-border-width-sm) solid var(--rs-color-border-default);
+  border-radius: var(--rs-radius-md);
+}
+
+.rs-docs__card-title {
+  margin: 0;
+
+  font-family: var(--rs-font-family-heading);
+  font-size: var(--rs-font-size-md);
+  font-weight: var(--rs-font-weight-semibold);
+  color: var(--rs-color-text-strong);
+}
+
+.rs-docs__chip {
+  display: block;
+  min-width: var(--rs-space-xl);
+  height: var(--rs-space-xl);
+
+  border: var(--rs-border-width-sm) solid var(--rs-color-border-default);
+  border-radius: var(--rs-radius-sm);
+}
+
+.rs-docs__card .rs-docs__chip {
+  height: var(--rs-space-2xl);
+}
+
+/* Tables */
+
+.rs-docs__table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: var(--rs-font-size-sm);
+}
+
+.rs-docs__th,
+.rs-docs__td {
+  padding: var(--rs-space-sm);
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.rs-docs__th {
+  border-bottom: var(--rs-border-width-md) solid var(--rs-color-border-default);
+
+  font-weight: var(--rs-font-weight-semibold);
+  color: var(--rs-color-text-strong);
+}
+
+.rs-docs__td {
+  border-bottom: var(--rs-border-width-sm) solid var(--rs-color-border-default);
+}
+
+/* Text */
+
+.rs-docs__code {
+  font-size: var(--rs-font-size-sm);
+  color: var(--rs-color-text-strong);
+  overflow-wrap: anywhere;
+}
+
+.rs-docs__muted {
+  font-size: var(--rs-font-size-sm);
+  color: var(--rs-color-text-subtle);
+  overflow-wrap: anywhere;
+}
+
+.rs-docs__sample {
+  margin: 0;
+
+  color: var(--rs-color-text-strong);
+}
+
+/* Scale previews */
+
+.rs-docs__bar {
+  display: block;
+  height: var(--rs-space-md);
+
+  background-color: var(--rs-color-interactive-accent);
+  border-radius: var(--rs-radius-xs);
+}
+
+.rs-docs__shape {
+  display: block;
+  width: var(--rs-space-2xl);
+  height: var(--rs-space-2xl);
+
+  background-color: var(--rs-color-surface-primary-subtle);
+  border: var(--rs-border-width-sm) solid var(--rs-color-interactive-primary);
+}
+
+.rs-docs__shape--outline {
+  background-color: var(--rs-color-surface-raised);
+}

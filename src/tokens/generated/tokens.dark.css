@@ -1,0 +1,41 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root[data-theme="dark"] {
+  --rs-color-surface-page: var(--rs-color-grey-900);
+  --rs-color-surface-raised: var(--rs-color-grey-800);
+  --rs-color-surface-hover: var(--rs-color-white-a5);
+  --rs-color-surface-selected: var(--rs-color-white-a10);
+  --rs-color-surface-primary-subtle: var(--rs-color-blue-500-a20);
+  --rs-color-surface-accent-subtle: var(--rs-color-pink-500-a20);
+  --rs-color-text-default: var(--rs-color-grey-300);
+  --rs-color-text-strong: var(--rs-color-white);
+  --rs-color-text-accent: var(--rs-color-white);
+  --rs-color-border-default: var(--rs-color-grey-750);
+  --rs-color-border-strong: var(--rs-color-grey-300);
+  --rs-color-status-neutral-bg: var(--rs-color-slate-600);
+  --rs-color-status-neutral-text: var(--rs-color-slate-100);
+  --rs-color-status-discovery-bg: var(--rs-color-violet-800);
+  --rs-color-status-discovery-text: var(--rs-color-violet-100);
+  --rs-color-status-info-bg: var(--rs-color-cyan-700);
+  --rs-color-status-info-text: var(--rs-color-cyan-100);
+  --rs-color-status-success-bg: var(--rs-color-green-800);
+  --rs-color-status-success-text: var(--rs-color-green-100);
+  --rs-color-status-warning-bg: var(--rs-color-amber-800);
+  --rs-color-status-warning-text: var(--rs-color-amber-100);
+  --rs-color-status-muted-bg: var(--rs-color-grey-700);
+  --rs-color-status-muted-text: var(--rs-color-grey-200);
+  --rs-color-status-danger-bg: var(--rs-color-red-700);
+  --rs-color-status-danger-text: var(--rs-color-red-100);
+  --rs-form-field-border-color: var(--rs-color-grey-500);
+  --rs-login-bg: var(--rs-color-blue-500-a10);
+  --rs-nav-cta-bg: var(--rs-color-pink-500-a10);
+  --rs-table-row-bg-alt: var(--rs-color-white-a3);
+  --rs-table-overflow-shadow-color: var(--rs-color-black-a50);
+  --rs-btn-primary-stroke-bg-hover: var(--rs-color-surface-hover);
+  --rs-nav-link-icon-color: var(--rs-color-text-default);
+  --rs-nav-cta-bg-hover: var(--rs-color-surface-accent-subtle);
+  --rs-table-header-color: var(--rs-color-text-default);
+  --rs-table-link-color: var(--rs-color-text-strong);
+}

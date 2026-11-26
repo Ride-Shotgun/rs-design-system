@@ -1,0 +1,17 @@
+/*
+ * Storybook chrome inside the preview iframe: make the canvas and docs
+ * pages follow the active theme instead of Storybook's white defaults.
+ */
+
+body {
+  background-color: var(--rs-color-surface-page);
+
+  color: var(--rs-color-text-default);
+}
+
+/* Two classes to beat the docs addon's single emotion class */
+
+.sbdocs.sbdocs-wrapper,
+.docs-story {
+  background-color: var(--rs-color-surface-page);
+}

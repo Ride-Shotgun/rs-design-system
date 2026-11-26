@@ -1,0 +1,12 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks"
+import { renderZIndex } from "./token-docs.js"
+
+<Meta title="Foundations/Z-index" />
+
+<Unstyled>
+  <div className="rs-docs">
+    <h1 className="rs-docs__title">Z-index</h1>
+    <p className="rs-docs__lead">Stacking order for layered UI. Use these instead of raw z-index numbers.</p>
+    <div className="rs-docs__body" dangerouslySetInnerHTML={{ __html: renderZIndex() }} />
+  </div>
+</Unstyled>

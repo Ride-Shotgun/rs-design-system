@@ -1,0 +1,12 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks"
+import { renderSemanticColours } from "./token-docs.js"
+
+<Meta title="Foundations/Colour/Semantic" />
+
+<Unstyled>
+  <div className="rs-docs">
+    <h1 className="rs-docs__title">Colour: semantic</h1>
+    <p className="rs-docs__lead">Colours named by what they do. Each one references a primitive, and the reference can change per theme. A dash in the Dark column means the light reference is used in both themes. The swatches follow the theme toggle in the toolbar.</p>
+    <div className="rs-docs__body" dangerouslySetInnerHTML={{ __html: renderSemanticColours() }} />
+  </div>
+</Unstyled>

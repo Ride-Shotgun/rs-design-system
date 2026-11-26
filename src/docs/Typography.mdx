@@ -1,0 +1,12 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks"
+import { renderTypography } from "./token-docs.js"
+
+<Meta title="Foundations/Typography" />
+
+<Unstyled>
+  <div className="rs-docs">
+    <h1 className="rs-docs__title">Typography</h1>
+    <p className="rs-docs__lead">Font families, sizes, weights, line heights and letter spacing, each shown as live sample text.</p>
+    <div className="rs-docs__body" dangerouslySetInnerHTML={{ __html: renderTypography() }} />
+  </div>
+</Unstyled>

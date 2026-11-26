@@ -1,0 +1,52 @@
+{
+  "btn": {
+    "primary-stroke-bg-hover": {
+      "$type": "color",
+      "$value": "{color.surface.hover}"
+    }
+  },
+  "form": {
+    "field-border-color": {
+      "$type": "color",
+      "$value": "{color.grey.500}"
+    }
+  },
+  "login": {
+    "bg": {
+      "$type": "color",
+      "$value": "{color.blue.500-a10}"
+    }
+  },
+  "nav": {
+    "link-icon-color": {
+      "$type": "color",
+      "$value": "{color.text.default}"
+    },
+    "cta-bg": {
+      "$type": "color",
+      "$value": "{color.pink.500-a10}"
+    },
+    "cta-bg-hover": {
+      "$type": "color",
+      "$value": "{color.surface.accent-subtle}"
+    }
+  },
+  "table": {
+    "header-color": {
+      "$type": "color",
+      "$value": "{color.text.default}"
+    },
+    "link-color": {
+      "$type": "color",
+      "$value": "{color.text.strong}"
+    },
+    "row-bg-alt": {
+      "$type": "color",
+      "$value": "{color.white-a3}"
+    },
+    "overflow-shadow-color": {
+      "$type": "color",
+      "$value": "{color.black-a50}"
+    }
+  }
+}

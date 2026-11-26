@@ -1,0 +1,49 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks"
+import "./token-docs.css"
+
+<Meta title="Foundations/Introduction" />
+
+{/* Keep paragraph text on the same line as its tag, or MDX wraps it in a second <p> */}
+
+<Unstyled>
+  <div className="rs-docs">
+    <h1 className="rs-docs__title">Design tokens</h1>
+    <p className="rs-docs__lead">Tokens are the named values (colours, spacing, type, radii and so on) that every Ride Shotgun component is built from.</p>
+    <div className="rs-docs__body">
+      <section className="rs-docs__section">
+        <h2 className="rs-docs__heading">Three tiers</h2>
+        <p className="rs-docs__text">Tokens are layered so that each tier only points at the tier below it.</p>
+        <ul className="rs-docs__swatches">
+          <li className="rs-docs__card">
+            <h3 className="rs-docs__card-title">1. Primitive</h3>
+            <p className="rs-docs__text">Raw values with no meaning attached, such as <code className="rs-docs__code">--rs-color-blue-500</code> or <code className="rs-docs__code">--rs-space-md</code>. Never use them directly in component CSS.</p>
+          </li>
+          <li className="rs-docs__card">
+            <h3 className="rs-docs__card-title">2. Semantic</h3>
+            <p className="rs-docs__text">Describe what a value does, such as <code className="rs-docs__code">--rs-color-text-default</code> or <code className="rs-docs__code">--rs-color-border-default</code>. Themes (light and dark) override this tier.</p>
+          </li>
+          <li className="rs-docs__card">
+            <h3 className="rs-docs__card-title">3. Component</h3>
+            <p className="rs-docs__text">Scoped to one component, such as <code className="rs-docs__code">--rs-btn-primary-bg-hover</code>. They point at semantic tokens wherever possible.</p>
+          </li>
+        </ul>
+      </section>
+      <section className="rs-docs__section">
+        <h2 className="rs-docs__heading">Naming</h2>
+        <p className="rs-docs__text">Every custom property starts with the <code className="rs-docs__code">--rs-</code> prefix, followed by the token's path in the JSON joined with hyphens. For example, <code className="rs-docs__code">color.text.default</code> becomes <code className="rs-docs__code">--rs-color-text-default</code>.</p>
+        <p className="rs-docs__text">Component tokens follow <code className="rs-docs__code">{"--rs-{component}-{property}-{variant}-{state}"}</code>.</p>
+      </section>
+      <section className="rs-docs__section">
+        <h2 className="rs-docs__heading">Source of truth</h2>
+        <p className="rs-docs__text">The DTCG JSON files in <code className="rs-docs__code">tokens/</code> are the source of truth. Never edit the generated CSS.</p>
+        <ul className="rs-docs__list">
+          <li><code className="rs-docs__code">primitives.json</code>: raw values</li>
+          <li><code className="rs-docs__code">semantic.light.json</code> and <code className="rs-docs__code">semantic.dark.json</code>: semantic tokens per theme</li>
+          <li><code className="rs-docs__code">component.light.json</code> and <code className="rs-docs__code">component.dark.json</code>: component tokens per theme</li>
+        </ul>
+        <p className="rs-docs__text"><code className="rs-docs__code">npm run tokens</code> builds them into <code className="rs-docs__code">src/tokens/generated/</code>. Dark values are written under <code className="rs-docs__code">:root[data-theme="dark"]</code>, and the dark files only contain tokens that differ from light.</p>
+        <p className="rs-docs__text">The pages in this section are generated from the same JSON, so a new token shows up here as soon as it is added and the tokens are rebuilt. Every swatch and sample uses the live CSS variable, so it follows the theme toggle in the toolbar.</p>
+      </section>
+    </div>
+  </div>
+</Unstyled>

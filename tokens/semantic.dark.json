@@ -1,0 +1,112 @@
+{
+  "color": {
+    "surface": {
+      "page": {
+        "$type": "color",
+        "$value": "{color.grey.900}"
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "{color.grey.800}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{color.white-a5}"
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "{color.white-a10}"
+      },
+      "primary-subtle": {
+        "$type": "color",
+        "$value": "{color.blue.500-a20}"
+      },
+      "accent-subtle": {
+        "$type": "color",
+        "$value": "{color.pink.500-a20}"
+      }
+    },
+    "text": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.grey.300}"
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.white}"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.white}"
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.grey.750}"
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.grey.300}"
+      }
+    },
+    "status": {
+      "neutral-bg": {
+        "$type": "color",
+        "$value": "{color.slate.600}"
+      },
+      "neutral-text": {
+        "$type": "color",
+        "$value": "{color.slate.100}"
+      },
+      "discovery-bg": {
+        "$type": "color",
+        "$value": "{color.violet.800}"
+      },
+      "discovery-text": {
+        "$type": "color",
+        "$value": "{color.violet.100}"
+      },
+      "info-bg": {
+        "$type": "color",
+        "$value": "{color.cyan.700}"
+      },
+      "info-text": {
+        "$type": "color",
+        "$value": "{color.cyan.100}"
+      },
+      "success-bg": {
+        "$type": "color",
+        "$value": "{color.green.800}"
+      },
+      "success-text": {
+        "$type": "color",
+        "$value": "{color.green.100}"
+      },
+      "warning-bg": {
+        "$type": "color",
+        "$value": "{color.amber.800}"
+      },
+      "warning-text": {
+        "$type": "color",
+        "$value": "{color.amber.100}"
+      },
+      "muted-bg": {
+        "$type": "color",
+        "$value": "{color.grey.700}"
+      },
+      "muted-text": {
+        "$type": "color",
+        "$value": "{color.grey.200}"
+      },
+      "danger-bg": {
+        "$type": "color",
+        "$value": "{color.red.700}"
+      },
+      "danger-text": {
+        "$type": "color",
+        "$value": "{color.red.100}"
+      }
+    }
+  }
+}

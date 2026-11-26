@@ -36,3 +36,5 @@ yarn-error.log
 *.sw?
 .cache/
 .env
+*storybook.log
+storybook-static/
