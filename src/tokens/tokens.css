@@ -1,0 +1,309 @@
+/*
+ * RS design tokens
+ *
+ * Shared token set intended to become the design system package.
+ * App-specific tokens live in their own file (e.g. pa-tokens.css).
+ *
+ * Tiers (in order):
+ *   1. Primitives  raw values. Colour primitives are never referenced
+ *                  from component CSS; dimension primitives (space,
+ *                  radius, border-width, font-*, line-height,
+ *                  letter-spacing, z) may be.
+ *   2. Semantic    what a colour does. Dark mode overrides these first.
+ *   3. Component   --rs-{component}-{variant?}-{property}-{state?},
+ *                  pointing at semantic tokens wherever possible.
+ *   4. Responsive  breakpoint overrides.
+ *   5. Dark theme  semantic overrides, then component overrides.
+ */
+
+:root {
+    color-scheme: light;
+
+    /* ========== 1. PRIMITIVES ========== */
+
+    /* Colour: blue */
+    --rs-color-blue-50: hsl(229 33% 97%);
+    --rs-color-blue-100: hsl(229 33% 95%);
+    --rs-color-blue-300: hsl(229 33% 52%);
+    --rs-color-blue-500: hsl(229 33% 32%);
+    --rs-color-blue-600: hsl(229 33% 25%);
+    --rs-color-blue-700: hsl(229 33% 17%);
+    --rs-color-blue-900: hsl(229 33% 5%);
+
+    /* Colour: pink */
+    --rs-color-pink-50: hsl(1 100% 98%);
+    --rs-color-pink-100: hsl(1 100% 95%);
+    --rs-color-pink-200: hsl(1 100% 90%);
+    --rs-color-pink-500: hsl(1 100% 69%);
+    --rs-color-pink-600: hsl(1 85% 62%);
+    --rs-color-pink-700: hsl(1 85% 52%);
+    --rs-color-pink-800: hsl(1 85% 32%);
+
+    /* Colour: grey */
+    --rs-color-grey-200: hsl(0 0% 90%);
+    --rs-color-grey-300: hsl(0 0% 85%);
+    --rs-color-grey-500: hsl(0 0% 50%);
+    --rs-color-grey-700: hsl(0 0% 25%);
+    --rs-color-grey-750: hsl(0 0% 17%);
+    --rs-color-grey-800: hsl(0 0% 10%);
+    --rs-color-grey-900: hsl(0 0% 5%);
+
+    /* Colour: secondary palette */
+    --rs-color-slate-100: hsl(215 19% 90%);
+    --rs-color-slate-600: hsl(215 19% 20%);
+    --rs-color-violet-100: hsl(263 69% 95%);
+    --rs-color-violet-800: hsl(263 69% 40%);
+    --rs-color-cyan-100: hsl(179 100% 90%);
+    --rs-color-cyan-700: hsl(179 100% 20%);
+    --rs-color-green-100: hsl(117 84% 90%);
+    --rs-color-green-800: hsl(117 84% 20%);
+    --rs-color-amber-100: hsl(42 84% 90%);
+    --rs-color-amber-800: hsl(42 84% 20%);
+    --rs-color-red-100: hsl(0 74% 94%);
+    --rs-color-red-700: hsl(0 74% 42%);
+
+    /* Colour: base */
+    --rs-color-black: hsl(0 0% 0%);
+    --rs-color-white: hsl(0 0% 100%);
+
+    /* Colour: transparent variants */
+    --rs-color-blue-500-a10: hsl(229 33% 32% / 10%);
+    --rs-color-blue-500-a20: hsl(229 33% 32% / 20%);
+    --rs-color-blue-500-a30: hsl(229 33% 32% / 30%);
+    --rs-color-pink-500-a10: hsl(1 100% 69% / 10%);
+    --rs-color-pink-500-a20: hsl(1 100% 69% / 20%);
+    --rs-color-pink-500-a30: hsl(1 100% 69% / 30%);
+    --rs-color-black-a5: hsl(0 0% 0% / 5%);
+    --rs-color-black-a25: hsl(0 0% 0% / 25%);
+    --rs-color-black-a50: hsl(0 0% 0% / 50%);
+    --rs-color-white-a3: hsl(0 0% 100% / 3%);
+    --rs-color-white-a5: hsl(0 0% 100% / 5%);
+    --rs-color-white-a10: hsl(0 0% 100% / 10%);
+
+    /* Font family */
+    --rs-font-family-heading: "DM Sans", sans-serif;
+    --rs-font-family-body: "Inter Tight", sans-serif;
+
+    /* Font size */
+    --rs-font-size-xs: 0.75rem;
+    --rs-font-size-sm: 0.875rem;
+    --rs-font-size-md: 1rem;
+    --rs-font-size-lg: 1.25rem;
+    --rs-font-size-xl: 1.75rem;
+
+    /* Font weight */
+    --rs-font-weight-regular: 400;
+    --rs-font-weight-semibold: 600;
+    --rs-font-weight-bold: 700;
+
+    /* Line height */
+    --rs-line-height-body: 1.35;
+
+    /* Letter spacing */
+    --rs-letter-spacing-tight: -0.05em;
+
+    /* Space */
+    --rs-space-xs: 0.25rem;
+    --rs-space-sm: 0.5rem;
+    --rs-space-md: 1rem;
+    --rs-space-lg: 1.5rem;
+    --rs-space-xl: 2rem;
+    --rs-space-2xl: 3rem;
+
+    /* Radius */
+    --rs-radius-xs: 0.25rem;
+    --rs-radius-sm: 0.35rem;
+    --rs-radius-md: 0.75rem;
+
+    /* Border width */
+    --rs-border-width-sm: 1px;
+    --rs-border-width-md: 2px;
+    --rs-border-width-lg: 3px;
+
+    /* Z-index layers */
+    --rs-z-nav: 10;
+    --rs-z-modal: 20;
+
+    /* ========== 2. SEMANTIC ========== */
+
+    /* Surface */
+    --rs-color-surface-page: var(--rs-color-blue-50);
+    --rs-color-surface-raised: var(--rs-color-white);
+    --rs-color-surface-hover: var(--rs-color-blue-50);
+    --rs-color-surface-selected: var(--rs-color-blue-100);
+    --rs-color-surface-primary-subtle: var(--rs-color-blue-50);
+    --rs-color-surface-accent-subtle: var(--rs-color-pink-50);
+
+    /* Text */
+    --rs-color-text-default: var(--rs-color-grey-700);
+    --rs-color-text-strong: var(--rs-color-black);
+    --rs-color-text-subtle: var(--rs-color-grey-500);
+    --rs-color-text-inverse: var(--rs-color-white);
+    --rs-color-text-accent: var(--rs-color-pink-600);
+
+    /* Border */
+    --rs-color-border-default: var(--rs-color-grey-300);
+    --rs-color-border-strong: var(--rs-color-grey-500);
+
+    /* Interactive */
+    --rs-color-interactive-primary: var(--rs-color-blue-500);
+    --rs-color-interactive-primary-hover: var(--rs-color-blue-600);
+    --rs-color-interactive-accent: var(--rs-color-pink-500);
+    --rs-color-interactive-accent-hover: var(--rs-color-pink-600);
+
+    /* Focus */
+    --rs-color-focus: var(--rs-color-pink-500);
+
+    /* Status */
+    --rs-color-status-neutral-bg: var(--rs-color-slate-100);
+    --rs-color-status-neutral-text: var(--rs-color-slate-600);
+    --rs-color-status-discovery-bg: var(--rs-color-violet-100);
+    --rs-color-status-discovery-text: var(--rs-color-violet-800);
+    --rs-color-status-info-bg: var(--rs-color-cyan-100);
+    --rs-color-status-info-text: var(--rs-color-cyan-700);
+    --rs-color-status-success-bg: var(--rs-color-green-100);
+    --rs-color-status-success-text: var(--rs-color-green-800);
+    --rs-color-status-warning-bg: var(--rs-color-amber-100);
+    --rs-color-status-warning-text: var(--rs-color-amber-800);
+    --rs-color-status-muted-bg: var(--rs-color-grey-200);
+    --rs-color-status-muted-text: var(--rs-color-grey-700);
+    --rs-color-status-danger-bg: var(--rs-color-red-100);
+    --rs-color-status-danger-text: var(--rs-color-red-700);
+
+    /* Space: horizontal page gutter (overridden in 4. RESPONSIVE) */
+    --rs-space-gutter: var(--rs-space-sm);
+
+    /* ========== 3. COMPONENT ========== */
+
+    /* Alert */
+    --rs-alert-primary-bg: var(--rs-color-surface-primary-subtle);
+    --rs-alert-warning-bg: var(--rs-color-surface-accent-subtle);
+
+    /* App logo */
+    --rs-app-logo-color: var(--rs-color-text-strong);
+
+    /* Breadcrumb */
+    --rs-breadcrumb-link-color: var(--rs-color-text-subtle);
+    --rs-breadcrumb-link-color-hover: var(--rs-color-interactive-accent);
+
+    /* Button */
+    --rs-btn-group-gap: var(--rs-space-sm);
+
+    --rs-btn-primary-bg: var(--rs-color-interactive-accent);
+    --rs-btn-primary-bg-hover: var(--rs-color-interactive-accent-hover);
+    --rs-btn-primary-text: var(--rs-color-text-inverse);
+
+    --rs-btn-primary-stroke-border-color: var(--rs-color-interactive-accent);
+    --rs-btn-primary-stroke-border-color-hover: var(--rs-color-pink-700);
+    --rs-btn-primary-stroke-bg-hover: var(--rs-color-surface-accent-subtle);
+    --rs-btn-primary-stroke-text: var(--rs-color-text-accent);
+
+    --rs-btn-secondary-bg: var(--rs-color-interactive-primary);
+    --rs-btn-secondary-bg-hover: var(--rs-color-interactive-primary-hover);
+    --rs-btn-secondary-text: var(--rs-color-text-inverse);
+
+    /* Copy */
+    --rs-copy-flow-space: var(--rs-space-md);
+    --rs-copy-link-color: var(--rs-color-text-strong);
+    --rs-copy-link-color-hover: var(--rs-color-interactive-accent);
+
+    /* Form */
+    --rs-form-field-border-width: var(--rs-border-width-sm);
+    --rs-form-field-border-color: var(--rs-color-border-default);
+    --rs-form-field-border-color-hover: var(--rs-color-border-strong);
+    --rs-form-field-border-color-focus: var(--rs-color-focus);
+    --rs-form-field-border-color-error: var(--rs-color-red-700);
+    --rs-form-field-placeholder-color: var(--rs-color-text-subtle);
+    --rs-form-field-text-color: var(--rs-color-text-strong);
+    --rs-form-error-bg: var(--rs-color-red-700);
+    --rs-form-error-text: var(--rs-color-text-inverse);
+
+    /* Login */
+    --rs-login-bg: var(--rs-color-blue-500);
+
+    /* Modal */
+    --rs-modal-backdrop-bg: var(--rs-color-black-a50);
+
+    /* Nav */
+    --rs-nav-link-color: var(--rs-color-text-default);
+    --rs-nav-link-color-hover: var(--rs-color-text-strong);
+    --rs-nav-link-color-active: var(--rs-color-text-strong);
+    --rs-nav-link-bg-hover: var(--rs-color-surface-hover);
+    --rs-nav-link-bg-active: var(--rs-color-surface-selected);
+    --rs-nav-link-icon-color: var(--rs-color-interactive-primary);
+    --rs-nav-link-icon-color-active: var(--rs-color-interactive-accent);
+
+    --rs-nav-cta-bg: var(--rs-color-surface-accent-subtle);
+    --rs-nav-cta-bg-hover: var(--rs-color-pink-200);
+    --rs-nav-cta-text: var(--rs-color-text-accent);
+
+    /* Table */
+    --rs-table-header-color: var(--rs-color-text-subtle);
+    --rs-table-link-color: var(--rs-color-interactive-primary);
+    --rs-table-link-color-hover: var(--rs-color-interactive-accent);
+    --rs-table-row-bg-alt: var(--rs-color-black-a5);
+    --rs-table-overflow-fade-color: var(--rs-color-surface-raised);
+    --rs-table-overflow-shadow-color: var(--rs-color-black-a25);
+
+    /* User */
+    --rs-user-img-bg: var(--rs-color-surface-page);
+}
+
+/* ========== 4. RESPONSIVE ========== */
+
+@media (min-width: 960px) {
+    :root {
+        --rs-space-gutter: var(--rs-space-md);
+    }
+}
+
+/* ========== 5. DARK THEME ========== */
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    /* Semantic: surface */
+    --rs-color-surface-page: var(--rs-color-grey-900);
+    --rs-color-surface-raised: var(--rs-color-grey-800);
+    --rs-color-surface-hover: var(--rs-color-white-a5);
+    --rs-color-surface-selected: var(--rs-color-white-a10);
+    --rs-color-surface-primary-subtle: var(--rs-color-blue-500-a20);
+    --rs-color-surface-accent-subtle: var(--rs-color-pink-500-a20);
+
+    /* Semantic: text */
+    --rs-color-text-default: var(--rs-color-grey-300);
+    --rs-color-text-strong: var(--rs-color-white);
+    --rs-color-text-accent: var(--rs-color-white);
+
+    /* Semantic: border */
+    --rs-color-border-default: var(--rs-color-grey-750);
+    --rs-color-border-strong: var(--rs-color-grey-300);
+
+    /* Semantic: status */
+    --rs-color-status-neutral-bg: var(--rs-color-slate-600);
+    --rs-color-status-neutral-text: var(--rs-color-slate-100);
+    --rs-color-status-discovery-bg: var(--rs-color-violet-800);
+    --rs-color-status-discovery-text: var(--rs-color-violet-100);
+    --rs-color-status-info-bg: var(--rs-color-cyan-700);
+    --rs-color-status-info-text: var(--rs-color-cyan-100);
+    --rs-color-status-success-bg: var(--rs-color-green-800);
+    --rs-color-status-success-text: var(--rs-color-green-100);
+    --rs-color-status-warning-bg: var(--rs-color-amber-800);
+    --rs-color-status-warning-text: var(--rs-color-amber-100);
+    --rs-color-status-muted-bg: var(--rs-color-grey-700);
+    --rs-color-status-muted-text: var(--rs-color-grey-200);
+    --rs-color-status-danger-bg: var(--rs-color-red-700);
+    --rs-color-status-danger-text: var(--rs-color-red-100);
+
+    /* Component: only where the component differs from its semantic token */
+    --rs-btn-primary-stroke-bg-hover: var(--rs-color-surface-hover);
+    --rs-form-field-border-color: var(--rs-color-grey-500);
+    --rs-login-bg: var(--rs-color-blue-500-a10);
+    --rs-nav-link-icon-color: var(--rs-color-text-default);
+    --rs-nav-cta-bg: var(--rs-color-pink-500-a10);
+    --rs-nav-cta-bg-hover: var(--rs-color-surface-accent-subtle);
+    --rs-table-header-color: var(--rs-color-text-default);
+    --rs-table-link-color: var(--rs-color-text-strong);
+    --rs-table-row-bg-alt: var(--rs-color-white-a3);
+    --rs-table-overflow-shadow-color: var(--rs-color-black-a50);
+}

@@ -1,0 +1,31 @@
+{
+  "name": "rs-design-system",
+  "version": "1.0.0",
+  "description": "**NOTE: This is a work in-progress**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ride-Shotgun/rs-design-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ride-Shotgun/rs-design-system/issues"
+  },
+  "homepage": "https://github.com/Ride-Shotgun/rs-design-system#readme",
+  "devDependencies": {
+    "vite": "^8.4.0"
+  },
+  "exports": {
+    ".": "./dist/rs-design-system.js",
+    "./style.css": "./dist/<output-name>.css"
+  },
+  "files": ["dist"]
+}
