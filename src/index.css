@@ -6,3 +6,5 @@
 
 @import url("./components/button/button.css");
 @import url("./components/text-button/text-button.css");
+
+@import url("./patterns/button-group/button-group.css");

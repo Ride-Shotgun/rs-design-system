@@ -1,0 +1,10 @@
+/*
+ * Pattern: arranges .btn components. Owns layout only; the buttons
+ * inside keep their own component styles.
+ */
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rs-btn-group-gap);
+}

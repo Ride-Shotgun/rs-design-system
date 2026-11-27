@@ -60,6 +60,12 @@ const preview = {
             "Z-index",
             "Component tokens",
           ],
+          // Each tier composes the ones above it:
+          // components use tokens, patterns arrange components,
+          // layouts give patterns and components a place on the page
+          "Components",
+          "Patterns",
+          "Layouts",
           "*",
         ],
       },

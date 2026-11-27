@@ -102,9 +102,3 @@
     border-color: var(--rs-btn-secondary-stroke-border-color-hover);
   }
 }
-
-.btn-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--rs-btn-group-gap);
-}

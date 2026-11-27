@@ -1,0 +1,44 @@
+/*
+ * DEMO layout: shows how a layout defines page regions (slots) and
+ * leaves their content to patterns and components.
+ *
+ * Uses existing tokens only. A real app shell will need component
+ * tokens for sizes such as sidebar width and header height, which
+ * don't exist yet, so the sidebar is sized by its content for now.
+ */
+
+.app-shell {
+  display: grid;
+  grid-template:
+    "header header" auto
+    "sidebar main" 1fr
+    / auto 1fr;
+  min-height: 100vh;
+}
+
+.app-shell__header {
+  display: flex;
+  grid-area: header;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--rs-space-md);
+  padding: var(--rs-space-md) var(--rs-space-gutter);
+
+  border-bottom: var(--rs-border-width-sm) solid var(--rs-color-border-default);
+}
+
+.app-shell__sidebar {
+  grid-area: sidebar;
+  padding: var(--rs-space-md);
+
+  background-color: var(--rs-color-surface-raised);
+  border-right: var(--rs-border-width-sm) solid var(--rs-color-border-default);
+}
+
+.app-shell__main {
+  display: flex;
+  grid-area: main;
+  flex-direction: column;
+  gap: var(--rs-space-lg);
+  padding: var(--rs-space-lg) var(--rs-space-gutter);
+}
