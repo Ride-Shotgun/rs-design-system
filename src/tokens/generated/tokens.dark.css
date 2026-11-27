@@ -33,7 +33,10 @@
   --rs-nav-cta-bg: var(--rs-color-pink-500-a10);
   --rs-table-row-bg-alt: var(--rs-color-white-a3);
   --rs-table-overflow-shadow-color: var(--rs-color-black-a50);
+  --rs-text-btn-secondary-text: var(--rs-color-blue-100);
   --rs-btn-primary-stroke-bg-hover: var(--rs-color-surface-hover);
+  --rs-btn-secondary-stroke-bg-hover: var(--rs-color-surface-hover);
+  --rs-btn-secondary-stroke-text: var(--rs-color-text-strong);
   --rs-nav-link-icon-color: var(--rs-color-text-default);
   --rs-nav-cta-bg-hover: var(--rs-color-surface-accent-subtle);
   --rs-table-header-color: var(--rs-color-text-default);

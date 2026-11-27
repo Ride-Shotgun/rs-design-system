@@ -1,0 +1,32 @@
+.text-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rs-space-xs);
+
+  font-weight: var(--rs-font-weight-semibold);
+  text-decoration: none;
+
+  svg {
+    display: block;
+    width: auto;
+    height: 0.75rem;
+
+    fill: currentColor;
+  }
+}
+
+.text-btn--sm {
+  font-size: var(--rs-font-size-xs);
+}
+
+.text-btn--lg {
+  font-size: var(--rs-font-size-sm);
+}
+
+.text-btn--primary {
+  color: var(--rs-text-btn-primary-text);
+}
+
+.text-btn--secondary {
+  color: var(--rs-text-btn-secondary-text);
+}

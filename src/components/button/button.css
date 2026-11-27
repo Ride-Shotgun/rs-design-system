@@ -90,6 +90,19 @@
   }
 }
 
+.btn--secondary-stroke {
+  background: none;
+  border: var(--rs-border-width-sm) solid
+    var(--rs-btn-secondary-stroke-border-color);
+
+  color: var(--rs-btn-secondary-stroke-text);
+
+  &:hover {
+    background-color: var(--rs-btn-secondary-stroke-bg-hover);
+    border-color: var(--rs-btn-secondary-stroke-border-color-hover);
+  }
+}
+
 .btn-group {
   display: flex;
   flex-wrap: wrap;

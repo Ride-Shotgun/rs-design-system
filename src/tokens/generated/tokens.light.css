@@ -134,6 +134,12 @@
   --rs-btn-secondary-bg: var(--rs-color-interactive-primary);
   --rs-btn-secondary-bg-hover: var(--rs-color-interactive-primary-hover);
   --rs-btn-secondary-text: var(--rs-color-text-inverse);
+  --rs-btn-secondary-stroke-border-color: var(--rs-color-interactive-primary);
+  --rs-btn-secondary-stroke-border-color-hover: var(
+    --rs-color-interactive-primary-hover
+  );
+  --rs-btn-secondary-stroke-bg-hover: var(--rs-color-surface-primary-subtle);
+  --rs-btn-secondary-stroke-text: var(--rs-color-interactive-primary);
   --rs-copy-link-color: var(--rs-color-text-strong);
   --rs-copy-link-color-hover: var(--rs-color-interactive-accent);
   --rs-form-field-border-color: var(--rs-color-border-default);
@@ -155,5 +161,7 @@
   --rs-table-link-color: var(--rs-color-interactive-primary);
   --rs-table-link-color-hover: var(--rs-color-interactive-accent);
   --rs-table-overflow-fade-color: var(--rs-color-surface-raised);
+  --rs-text-btn-primary-text: var(--rs-color-interactive-accent);
+  --rs-text-btn-secondary-text: var(--rs-color-interactive-primary);
   --rs-user-img-bg: var(--rs-color-surface-page);
 }

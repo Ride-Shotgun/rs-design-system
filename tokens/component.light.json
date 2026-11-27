@@ -69,6 +69,22 @@
     "secondary-text": {
       "$type": "color",
       "$value": "{color.text.inverse}"
+    },
+    "secondary-stroke-border-color": {
+      "$type": "color",
+      "$value": "{color.interactive.primary}"
+    },
+    "secondary-stroke-border-color-hover": {
+      "$type": "color",
+      "$value": "{color.interactive.primary-hover}"
+    },
+    "secondary-stroke-bg-hover": {
+      "$type": "color",
+      "$value": "{color.surface.primary-subtle}"
+    },
+    "secondary-stroke-text": {
+      "$type": "color",
+      "$value": "{color.interactive.primary}"
     }
   },
   "copy": {
@@ -201,6 +217,16 @@
     "overflow-shadow-color": {
       "$type": "color",
       "$value": "{color.black-a25}"
+    }
+  },
+  "text-btn": {
+    "primary-text": {
+      "$type": "color",
+      "$value": "{color.interactive.accent}"
+    },
+    "secondary-text": {
+      "$type": "color",
+      "$value": "{color.interactive.primary}"
     }
   },
   "user": {
